@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reproducir Tacones Rojos</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      background-color: #ff5c5c;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff3838;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="playButton">Reproducir Tacones Rojos</button>
+  
+  <!-- Asegúrate de que tacones-rojos.mp3 esté en el mismo directorio que este archivo HTML -->
+  <audio id="song" src="tacones-rojos.mp3" preload="auto"></audio>
+
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      const audio = document.getElementById('song');
+      audio.play();
+    });
+  </script>
+
+</body>
+</html>
